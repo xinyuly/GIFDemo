@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-ro-t0X" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="70" y="74" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zZ0-ro-t0X" secondAttribute="height" multiplier="1:1" id="5h5-LQ-eLK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示GIF图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-1E-E1a">
+                                <rect key="frame" x="128" y="274" width="65" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mss-Be-umr" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="70" y="311" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mss-Be-umr" secondAttribute="height" multiplier="1:1" id="onK-QM-1Qy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生成GIF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihJ-qP-Ojc">
+                                <rect key="frame" x="135.5" y="505" width="50.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ihJ-qP-Ojc" firstAttribute="centerX" secondItem="mss-Be-umr" secondAttribute="centerX" id="MtC-rw-Knr"/>
+                            <constraint firstItem="zZ0-ro-t0X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NMd-zt-GdU"/>
+                            <constraint firstItem="zZ0-ro-t0X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="U6D-6C-8U4"/>
+                            <constraint firstItem="mss-Be-umr" firstAttribute="width" secondItem="zZ0-ro-t0X" secondAttribute="width" id="V1n-1f-d68"/>
+                            <constraint firstItem="qC8-1E-E1a" firstAttribute="centerX" secondItem="zZ0-ro-t0X" secondAttribute="centerX" id="ZVo-8y-tvx"/>
+                            <constraint firstItem="mss-Be-umr" firstAttribute="centerX" secondItem="zZ0-ro-t0X" secondAttribute="centerX" id="gsu-kX-dIR"/>
+                            <constraint firstItem="mss-Be-umr" firstAttribute="top" secondItem="qC8-1E-E1a" secondAttribute="bottom" constant="20" id="pGz-Ta-7GB"/>
+                            <constraint firstItem="zZ0-ro-t0X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="tkM-qx-VhA"/>
+                            <constraint firstItem="ihJ-qP-Ojc" firstAttribute="top" secondItem="mss-Be-umr" secondAttribute="bottom" constant="14" id="v6m-XX-AGP"/>
+                            <constraint firstItem="qC8-1E-E1a" firstAttribute="top" secondItem="zZ0-ro-t0X" secondAttribute="bottom" constant="20" id="x6a-Rf-DTa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gifImgView" destination="mss-Be-umr" id="lJl-zu-3ll"/>
+                        <outlet property="imageView" destination="zZ0-ro-t0X" id="dON-6g-2A4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
